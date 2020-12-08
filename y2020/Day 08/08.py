@@ -14,14 +14,14 @@ def run(program):
     while True:
         try:
             if visited[str(ptr)]:
-                return(ptr, acc)
+                return (ptr, acc)
         except KeyError:
             visited[str(ptr)] = 1
 
         try:
             row = program[ptr]
         except IndexError:
-            return(ptr, acc)
+            return (ptr, acc)
 
         if row[0] == "acc":
             if row[1][0] == "+":
@@ -42,30 +42,22 @@ def run(program):
 
 print(run(data))
 
-jmps = []
-nops = []
 i = 0
 for row in data:
     if row[0] == "jmp":
-        jmps.append(i)
+        data_mod = data.copy()
+        data_mod[i] = ["nop", data_mod[i][1]]
+
+        ptr, acc = run(data_mod)
+
+        if ptr == len(data):
+            print(ptr, acc)
     elif row[0] == "nop":
-        nops.append(i)
+        data_mod = data.copy()
+        data_mod[i] = ["jmp", data_mod[i][1]]
+
+        ptr, acc = run(data_mod)
+
+        if ptr == len(data):
+            print(ptr, acc)
     i += 1
-
-for i in jmps:
-    data_mod = data.copy()
-    data_mod[i] = ["nop", data_mod[i][1]]
-
-    ptr, acc = run(data_mod)
-
-    if ptr == len(data):
-        print(ptr, acc)
-
-for i in nops:
-    data_mod = data.copy()
-    data_mod[i] = ["jmp", data_mod[i][1]]
-
-    ptr, acc = run(data_mod)
-
-    if ptr == len(data):
-        print(ptr, acc)
