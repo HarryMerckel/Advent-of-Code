@@ -8,6 +8,8 @@ I've attempted parts of AoC before, but this is a fresh set of attempts started 
 
 In the table below, a single \* means I've completed 1/2 of the day's puzzles, and \*\* means I've completed both.
 
+If I can be bothered I'll go through and link each set of stars to that day's solution.
+
 | Day | 2015  | 2016  | 2017  | 2018  | 2019  | 2020  |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: |
 | 01  |  **   |       |       |       |       |  **   |
