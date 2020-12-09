@@ -21,7 +21,6 @@ for boarding_pass in data:
     row = decode_row(boarding_pass[:7])
     col = decode_col(boarding_pass[-3:])
     seat_id = row * 8 + col
-    print(f"{boarding_pass}: row {row}, column {col}, seat ID {seat_id}.")
     seat_ids.append(seat_id)
 
 print(min(seat_ids), max(seat_ids))

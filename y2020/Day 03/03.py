@@ -20,7 +20,6 @@ def get_trees(dx, dy):
     trees = 0
     while True:
         try:
-            print(data[y][x % width])
             if data[y][x % width] == '#':
                 trees += 1
             x += dx

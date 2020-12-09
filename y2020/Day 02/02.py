@@ -6,8 +6,6 @@ with open("input.txt") as file:
     for line in file:
         data.append(line.strip("\n"))
 
-print(len(data))
-
 valid = 0
 
 for row in data:
@@ -19,7 +17,7 @@ for row in data:
 
 print(valid)
 
-valid2 = 0
+valid = 0
 
 for row in data:
     policy, password = row.split(":")
@@ -35,7 +33,6 @@ for row in data:
     except IndexError:
         pos2valid = False
     if operator.xor(pos1valid, pos2valid):
-        valid2 += 1
-        print(row, len(password), password[int(pos1) - 1], pos1valid, password[int(pos2) - 1], pos2valid)
+        valid += 1
 
-print(valid2)
+print(valid)
