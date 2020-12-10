@@ -28,11 +28,10 @@ def get_contiguous_group(target, data):
 
 
 for i in range(preamble_len, len(data)):
-    if not is_valid(data[i], data[i-25:i]):
-        print("p1", data[i])
+    if not is_valid(data[i], data[i-preamble_len:i]):
+        print(data[i])
         for j in range(len(data)):
             result = get_contiguous_group(data[i], data[j:])
-            if result:
-                print(result)
-                print(data[j:j+result])
+            if result >= 2:
                 print(min(data[j:j+result]) + max(data[j:j+result]))
+                break
