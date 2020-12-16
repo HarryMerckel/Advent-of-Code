@@ -27,7 +27,7 @@ If I can be bothered I'll go through and link each set of stars to that day's so
 | 13  |       |       |       |       |       |  **   |
 | 14  |       |       |       |       |       |  **   |
 | 15  |       |       |       |       |       |  **   |
-| 16  |       |       |       |       |       |       |
+| 16  |       |       |       |       |       |  *    |
 | 17  |       |       |       |       |       |       |
 | 18  |       |       |       |       |       |       |
 | 19  |       |       |       |       |       |       |
